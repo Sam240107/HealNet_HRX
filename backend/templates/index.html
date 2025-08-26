@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Policy Document Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css?v=2" />
+</head>
+<body>
+  <div class="page-bg">
+    <div class="popup-container">
+      <!-- Header Section -->
+      <div class="header-section">
+        <div class="app-icon">📋</div>
+        <h1 class="title">Policy Document Analyzer</h1>
+        <p class="subtitle">AI-Powered Insurance Document Assistant</p>
+      </div>
+
+      <!-- Upload Section -->
+      <div class="form-section">
+        <form id="uploadForm">
+          <div class="input-group">
+            <label class="input-label">Select Policy Document</label>
+            <div class="form-row">
+              <div class="file-input-wrapper">
+                <input type="file" id="pdfFile" accept="application/pdf" required />
+                <label for="pdfFile" class="file-input-label" id="fileLabel">
+                  <span class="file-icon">📄</span>
+                  <span class="file-text">Choose PDF file...</span>
+                </label>
+              </div>
+              <button type="submit" class="btn">Upload PDF</button>
+            </div>
+          </div>
+        </form>
+        
+        <div id="uploadMessage" class="message-box hidden"></div>
+      </div>
+
+      <!-- Question Section -->
+      <div class="form-section">
+        <form id="askForm">
+          <div class="input-group">
+            <label class="input-label">Ask About Your Policy</label>
+            <div class="form-row">
+              <input
+                type="text"
+                id="question"
+                placeholder="What is my coverage limit for property damage?"
+                required
+                autocomplete="off"
+              />
+              <button type="submit" class="btn ask-btn">Ask</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Loading -->
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Processing your request...</p>
+      </div>
+
+      <!-- Answer -->
+      <div id="answer" class="answer-box hidden"></div>
+
+      <!-- Recommendation -->
+      <div id="recommendation" class="recommendation-box hidden"></div>
+
+      <!-- Trust Indicators -->
+      <div class="trust-section">
+        <div class="trust-item">
+          <span class="trust-icon">🛡️</span>
+          <span class="trust-text">Secure Processing</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">⚡</span>
+          <span class="trust-text">Instant Analysis</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">🎯</span>
+          <span class="trust-text">Accurate Results</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
